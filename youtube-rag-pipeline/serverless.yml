@@ -1,0 +1,15 @@
+service: youtube-rag-pipeline
+
+provider:
+  name: aws
+  runtime: python3.12
+  architecture: arm64
+  region: ap-south-1
+
+functions:
+  hello:
+    handler: src/handler.handler
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
